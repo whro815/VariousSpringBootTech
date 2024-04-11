@@ -1,0 +1,8 @@
+services:
+  mariadb:
+    image: 'mariadb'
+    environment:
+      - 'MARIADB_DATABASE=test_db'
+      - 'MARIADB_ROOT_PASSWORD=root'
+    ports:
+      - ':3306'
