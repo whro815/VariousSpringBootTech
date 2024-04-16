@@ -22,8 +22,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<UserDto> selectUserInfo(String uid) {
-        List<UserDto> userDtos = userRepo.selectUserInfoList(uid);
+    public UserDto selectUserInfo(String uid) {
+        UserDto userDtos = userRepo.selectUserInfo(uid);
         return userDtos;
     }
 

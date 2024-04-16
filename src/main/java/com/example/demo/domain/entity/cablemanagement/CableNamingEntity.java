@@ -1,5 +1,6 @@
-package com.example.demo.domain.entity;
+package com.example.demo.domain.entity.cablemanagement;
 
+import com.example.demo.domain.entity.BaseEntity;
 import com.example.demo.dto.cablemanagement.CableNamingAttributeDto;
 import com.example.demo.utils.CableNamingAttributeConverter;
 
@@ -20,7 +21,7 @@ import java.util.List;
 @DynamicUpdate
 @DynamicInsert
 @NoArgsConstructor
-public class CableNamingEntity extends BaseEntity{
+public class CableNamingEntity extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long cnid;

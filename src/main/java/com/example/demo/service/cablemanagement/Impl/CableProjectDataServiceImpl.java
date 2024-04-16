@@ -1,6 +1,6 @@
 package com.example.demo.service.cablemanagement.Impl;
 
-import com.example.demo.domain.entity.CableNamingEntity;
+import com.example.demo.domain.entity.cablemanagement.CableNamingEntity;
 import com.example.demo.domain.repo.canlemanagement.CableNamingRepo;
 import com.example.demo.dto.cablemanagement.CableNamingDto;
 import com.example.demo.service.cablemanagement.CableProjectDataService;

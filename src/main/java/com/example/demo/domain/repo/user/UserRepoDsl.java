@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface UserRepoDsl {
     @Transactional(readOnly = true)
-    List<UserDto> selectUserInfoList(String uid);
+    UserDto selectUserInfo(String uid);
 
 }

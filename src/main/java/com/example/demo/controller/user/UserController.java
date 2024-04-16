@@ -23,23 +23,20 @@ public class UserController extends BaseController {
     private UserService userService;
 
 
-    @GetMapping(value = "/userInfo/list"
-                , headers = { "Content-type=application/json" })
+    @GetMapping(value = "/userInfo/get", headers = { "Content-type=application/json" })
     public Map<String, Object> getUserInfo(@RequestParam(name = "uid")String uid) throws Exception{
 
         HashMap<String, Object> map = new HashMap<>();
 
-        List<UserDto> userDtos = userService.selectUserInfo(uid);
+        UserDto userDtos = userService.selectUserInfo(uid);
         map.put("userInfoList", userDtos);
 
         return map;
 	}
 
 
-    @PostMapping(value = "/userInfo/set"
-                , headers = { "Content-type=application/json" })
-    public ResultResp setUserInfo(@RequestBody UserDto userDto)
-            throws IOException {
+    @PostMapping(value = "/userInfo/set", headers = { "Content-type=application/json" })
+    public ResultResp setUserInfo(@RequestBody UserDto userDto) throws IOException {
         ResultResp resp = new ResultResp();
         boolean isOk = userService.insertUserInfo(userDto);
 

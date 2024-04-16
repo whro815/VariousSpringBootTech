@@ -22,7 +22,7 @@ public class UserRepoDslImpl extends BaseRepo implements UserRepoDsl {
     }
 
     @Override
-    public List<UserDto> selectUserInfoList(String uid) {
+    public UserDto selectUserInfo(String uid) {
         return jpaQueryFactory.select(
                         Projections.constructor(
                             UserDto.class,
@@ -42,6 +42,6 @@ public class UserRepoDslImpl extends BaseRepo implements UserRepoDsl {
                 )
                 .from(userEntity)
                 .where(userEntity.del_yn.eq("N").and(userEntity.uid.eq(uid)))
-                .fetch();
+                .fetchFirst();
     }
 }

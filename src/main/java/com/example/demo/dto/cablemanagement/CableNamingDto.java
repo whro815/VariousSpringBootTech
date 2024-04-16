@@ -1,7 +1,6 @@
 package com.example.demo.dto.cablemanagement;
 
-import com.example.demo.domain.entity.BaseEntity;
-import com.example.demo.domain.entity.CableNamingEntity;
+import com.example.demo.domain.entity.cablemanagement.CableNamingEntity;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 //import io.swagger.v3.oas.annotations.media.Schema;

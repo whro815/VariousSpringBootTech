@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
 
-    List<UserDto> selectUserInfo(String uid);
+    UserDto selectUserInfo(String uid);
     boolean insertUserInfo(UserDto userDto);
 
 

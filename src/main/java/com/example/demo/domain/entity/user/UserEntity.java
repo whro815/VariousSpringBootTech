@@ -26,26 +26,26 @@ import javax.persistence.Table;
 public class UserEntity extends BaseEntity {
     @Id
     @Column(name = "uid")
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Schema(example = "사용자아이디")
     private String uid;
     @Column(name = "email")
-    //@Schema(example = "이메일")
     @JsonAlias("email")
 	private String email;
     @Column(name = "pwd")
     @JsonAlias("pwd")
-    //@Schema(example = "비밀번호")
 	private String pwd;
     @Column(name = "name")
-    //@Schema(example = "사용자명")
 	private String name;
     @Column(name = "role")
-    //@Schema(example = "사용자유형", allowableValues = {"ADMIN","USER"})
 	private String role;
 
     public UserDto toDto(){
-        return UserDto.builder().uid(uid).pwd(pwd).email(email).name(name).role(role).build();
+        return UserDto.builder()
+                .uid(uid)
+                .pwd(pwd)
+                .email(email)
+                .name(name)
+                .role(role)
+                .build();
     }
 
     @Builder

@@ -1,12 +1,9 @@
 package com.example.demo.dto.cablemanagement;
 
-import com.example.demo.domain.entity.CableNamingEntity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
-
-import javax.persistence.Embedded;
 
 @Data
 @ToString
