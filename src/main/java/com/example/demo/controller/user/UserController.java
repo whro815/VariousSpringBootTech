@@ -41,13 +41,24 @@ public class UserController extends BaseController {
         boolean isOk = userService.insertUserInfo(userDto);
 
         if(!isOk){
-         // ture 가 아닐때
+            // ture 가 아닐때
             setMessage(resp, 403);
         }
         return resp;
     }
 
+    @PostMapping(value = "/userInfo/upt", headers = { "Content-type=application/json" })
+    public boolean uptUserInfo(@RequestBody UserDto userDto) throws IOException {
+        ResultResp resp = new ResultResp();
 
+        boolean isOk = userService.updateUserInfo(userDto);
+        if(!isOk){
+            // ture 가 아닐때
+            setMessage(resp, 403);
+        }
+
+        return isOk;
+    }
 
 
 }

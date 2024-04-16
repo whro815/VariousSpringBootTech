@@ -13,7 +13,7 @@ import java.util.List;
 
 public class CableNamingAttributeConverter implements AttributeConverter<List<CableNamingAttributeDto>, String> {
 
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+    public static final ObjectMapper objectMapper = new ObjectMapper();
 
     static {
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);

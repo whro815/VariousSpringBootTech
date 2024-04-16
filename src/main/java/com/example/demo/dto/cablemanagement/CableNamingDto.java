@@ -16,35 +16,24 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class CableNamingDto {
-
-    //JsonAlias : 역직렬화를 할 때 한 개 이상의 이름을 한 객체 필드에 매핑되게 설정
-    @JsonAlias("cnid")
+    @JsonAlias("cnid")          //JsonAlias : 역직렬화를 할 때 한 개 이상의 이름을 한 객체 필드에 매핑되게 설정
     private Long cnid;
-
     @JsonAlias("pid")
 	private String pid;
-
     @JsonAlias("uid")
 	private String uid;
-
     @JsonAlias("type")
 	private String type;
-
     @JsonAlias("ctype")
     private String ctype;
-
     @JsonAlias("name")
 	private String name;
-
     @JsonAlias("orderno")
 	private Integer orderno;
-
     @JsonAlias("reg_date")
     private String reg_date;
-
     @JsonAlias("seq_num")
     private Integer seq_num;
-
     @JsonAlias("roles")
     @JsonProperty("roles")      // JsonProperty : 직렬화시 설정할 수 잇는 이름을 지정하는 애노테이션
     private List<CableNamingAttributeDto> roles;

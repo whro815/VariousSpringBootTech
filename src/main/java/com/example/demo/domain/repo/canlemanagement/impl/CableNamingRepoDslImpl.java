@@ -13,8 +13,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.example.demo.utils.CableConstructorSettings;
 
 import java.util.List;
-
-import static com.example.demo.domain.entity.QCableNamingEntity.cableNamingEntity;
+import static com.example.demo.domain.entity.cablemanagement.QCableNamingEntity.cableNamingEntity;
 
 public class CableNamingRepoDslImpl extends BaseRepo implements CableNamingRepoDsl {
 
@@ -23,16 +22,10 @@ public class CableNamingRepoDslImpl extends BaseRepo implements CableNamingRepoD
         //TODO Auto-generated constructor stub
     }
 
-
-//   0
-
-
     @Override
     public List<CableNamingDto> findCableNamingList(String pid) {
-
          return jpaQueryFactory.select(
                                         Projections.constructor(
-
                                                 CableNamingDto.class,
                                                 cableNamingEntity.cnid,
                                                 cableNamingEntity.pid,
@@ -51,7 +44,6 @@ public class CableNamingRepoDslImpl extends BaseRepo implements CableNamingRepoD
                                                     )
                                                     ,"reg_date"
                                                 )
-
                                         )
                                     )
                                 .from(cableNamingEntity)
@@ -61,11 +53,4 @@ public class CableNamingRepoDslImpl extends BaseRepo implements CableNamingRepoD
 
     }
 
-//    @Override
-//    public CableNamingDto findCableDataInfo(Long cnid) {
-//       return jpaQueryFactory.select(CableDataContructor)
-//                            .from(cableNamingEntity)
-//                            .where(cableNamingEntity.cnid.eq(cnid).and(cableNamingEntity.del_yn.eq("N")))
-//                            .fetchOne();
-//    }
 }

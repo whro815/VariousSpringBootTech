@@ -10,5 +10,6 @@ public interface UserService {
     UserDto selectUserInfo(String uid);
     boolean insertUserInfo(UserDto userDto);
 
+    boolean updateUserInfo(UserDto userDto);
 
 }

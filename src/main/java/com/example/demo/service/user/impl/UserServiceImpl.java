@@ -38,4 +38,16 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public boolean updateUserInfo(UserDto userDto) {
+        try {
+            userRepo.save(userDto.toEntity());
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
