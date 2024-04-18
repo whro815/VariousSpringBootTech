@@ -59,6 +59,8 @@ dependencies {
 
     //Validation
 	implementation 'org.springframework.boot:spring-boot-starter-validation:2.7.18'
+
+    implementation 'com.auth0:java-jwt:4.4.0'
 }
 
 //Querydsl(3/3)
